@@ -1,17 +1,16 @@
 {
+    "version" :2,
+    "name": "e-commerce",
     "builds":[
         {
-            "src":"./backend\\server.js",
+            "src":"app.js",
             "use":"@vercel/node"
         }
     ],
     "routes":[
         {
-            "src":"/.*",
-            "dest":"backend\\server.js",
-            
-                "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-            
-        }
+            "src":"/(.*)",
+            "dest":"/app.js"
+         }
     ]
 }
