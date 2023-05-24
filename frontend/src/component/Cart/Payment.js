@@ -58,7 +58,7 @@ const Payment = () => {
         },
       };
       const { data } = await axios.post(
-        "https://arfmart-njos.onrender.com/api/v1/payment/process",
+        "/api/v1/payment/process",
         paymentData,
         config
       );
