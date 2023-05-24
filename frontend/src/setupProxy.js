@@ -60,7 +60,7 @@ module.exports = function(app) {
         })
       );
       app.use(
-        '/api/v1/stripeapikey',
+        'https://arfmart-njos.onrender.com/api/v1/stripeapikey',
         createProxyMiddleware({
           target: 'http://localhost:4000',
           changeOrigin: true,
