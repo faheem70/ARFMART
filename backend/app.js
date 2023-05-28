@@ -25,7 +25,7 @@ const payment = require("./routes/paymentRoute");
 
 app.use("https://e-commerce-22nf.onrender.com/api/v1", product);
 app.use("https://e-commerce-22nf.onrender.com/api/v1", user);
-app.use("https://e-commerce-22nf.onrender.com/api/v1", order);
+app.use("https://backend-arf.onrender.com/api/v1", order);
 app.use("https://e-commerce-22nf.onrender.com/api/v1", payment);
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
