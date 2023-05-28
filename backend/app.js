@@ -35,7 +35,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'frontend','build')));
 app.get("*", (req, res) => {
  res.sendFile(path.resolve(__dirname, 'frontend','build','index.html'));
-  res.setHeader("Access-Control-Allow-Credentials,", "true");
+  //res.setHeader("Access-Control-Allow-Credentials,", "true");
 });
 
 // Middleware for Errors
