@@ -14,11 +14,10 @@ import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstants";
 import { useNavigate } from "react-router-dom";
 
-const NewProduct = () => {
-  const history = useNavigate();
+const NewProduct = ({ }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
-
+  const history = useNavigate();
   const { loading, error, success } = useSelector((state) => state.newProduct);
 
   const [name, setName] = useState("");
@@ -71,7 +70,7 @@ const NewProduct = () => {
   };
 
   const createProductImagesChange = (e) => {
-    const files = String.from(e.target.files);
+    const files = Array.from(e.target.files);
 
     setImages([]);
     setImagesPreview([]);

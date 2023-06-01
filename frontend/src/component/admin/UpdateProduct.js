@@ -39,13 +39,14 @@ const UpdateProduct = ({ match }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
-    "Camera",
-    "SmartPhones",
+    "Mobile & Electronic Devices",
+    "Fahsion and Beauty",
+    "Groceries",
+    "Households",
+    "Book & Education",
+    "Toys",
+    "Sports",
+    "Automotive",
   ];
 
   const { productId } = useParams();
@@ -54,12 +55,12 @@ const UpdateProduct = ({ match }) => {
     if (product && product._id !== productId) {
       dispatch(getProductDetails(productId));
     } else {
-      setName(product.name);
-      setDescription(product.description);
-      setPrice(product.price);
-      setCategory(product.category);
-      setStock(product.Stock);
-      setOldImages(product.images);
+      setName(product?.name);
+      setDescription(product?.description);
+      setPrice(product?.price);
+      setCategory(product?.category);
+      setStock(product?.Stock);
+      setOldImages(product?.images);
     }
     if (error) {
       alert.error(error);
