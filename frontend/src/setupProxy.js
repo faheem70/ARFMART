@@ -1,75 +1,75 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const proxy = require('http-proxy-middleware');
 module.exports = function(app) {
-    app.use(createProxyMiddleware('/api/v1/products', // replace with your endpoint
+  app.use(createProxyMiddleware('https://arfmart.onrender.com/api/v1/products', // replace with your endpoint
       {
         target: 'https://arfmart.onrender.com',
         changeOrigin: true, } // replace with your target
     ));
-    app.use(createProxyMiddleware('/api/v1/product', // replace with your endpoint
+  app.use(createProxyMiddleware('https://arfmart.onrender.com/api/v1/product', // replace with your endpoint
       {
-        target: 'http://localhost:4000',
+        target: 'https://arfmart.onrender.com',
         changeOrigin: true, } // replace with your target
     ));
     
     app.use(
-        '/api/v1/login',
+      'https://arfmart.onrender.com/api/v1/login',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/register',
+        'https://arfmart.onrender.com/api/v1/register',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/me',
+        'https://arfmart.onrender.com/api/v1/me',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/logout',
+        'https://arfmart.onrender.com/api/v1/logout',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/me/update',
+        'https://arfmart.onrender.com/api/v1/me/update',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/password/update',
+        'https://arfmart.onrender.com/api/v1/password/update',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/password/forgot',
+        'https://arfmart.onrender.com/api/v1/password/forgot',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/stripeapikey',
+        'https://arfmart.onrender.com/api/v1/stripeapikey',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/payment/process',
+        'https://arfmart.onrender.com/api/v1/payment/process',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
@@ -77,84 +77,84 @@ module.exports = function(app) {
       );
 
       app.use(
-        '/api/v1/order/new',
+        'https://arfmart.onrender.com/api/v1/order/new',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/orders/me',
+        'https://arfmart.onrender.com/api/v1/orders/me',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/order',
+        'https://arfmart.onrender.com/api/v1/order',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/review',
+        'https://arfmart.onrender.com/api/v1/review',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/products',
+        'https://arfmart.onrender.com/api/v1/admin/products',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/product',
+        'https://arfmart.onrender.com/api/v1/admin/product',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/product/new',
+        'https://arfmart.onrender.com/api/v1/admin/product/new',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/orders',
+        'https://arfmart.onrender.com/api/v1/admin/orders',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/order',
+        'https://arfmart.onrender.com/api/v1/admin/order',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/users',
+        'https://arfmart.onrender.com/api/v1/admin/users',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/user',
+        'https://arfmart.onrender.com/api/v1/admin/user',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
         })
       );
       app.use(
-        '/api/v1/admin/reviews',
+        'https://arfmart.onrender.com/api/v1/admin/reviews',
         createProxyMiddleware({
           target: 'https://arfmart.onrender.com',
           changeOrigin: true,
