@@ -5,10 +5,10 @@ const router = express.Router();
 
 
 
-router.route("https://arfmart-1v2p.onrender.com/order/new").post(isAuthenticatedUser, newOrder);
-router.route('https://arfmart-1v2p.onrender.com/order/:id').get(isAuthenticatedUser, getSingleOrder);
-router.route("https://arfmart-1v2p.onrender.com/orders/me").get(isAuthenticatedUser, myOrder);
+router.route("https://arfmart.onrender.com/order/new").post(isAuthenticatedUser, newOrder);
+router.route('https://arfmart.onrender.com/order/:id').get(isAuthenticatedUser, getSingleOrder);
+router.route("https://arfmart.onrender.com/orders/me").get(isAuthenticatedUser, myOrder);
 
-router.route("https://arfmart-1v2p.onrender.com/admin/orders").get(isAuthenticatedUser, authorizeRoles("admin"), getAllOrder);
-router.route("https://arfmart-1v2p.onrender.com/admin/order/:id").put(isAuthenticatedUser, authorizeRoles("admin"), updateOrder).delete(isAuthenticatedUser, authorizeRoles("admin"), deleteOrder);
+router.route("https://arfmart.onrender.com/admin/orders").get(isAuthenticatedUser, authorizeRoles("admin"), getAllOrder);
+router.route("https://arfmart.onrender.com/admin/order/:id").put(isAuthenticatedUser, authorizeRoles("admin"), updateOrder).delete(isAuthenticatedUser, authorizeRoles("admin"), deleteOrder);
 module.exports = router;
