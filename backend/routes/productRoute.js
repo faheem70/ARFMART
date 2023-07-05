@@ -4,27 +4,27 @@ const { isAuthenticatedUser, authorizeRoles } = require('../middleware/auth');
 
 const router = express.Router();
 
-router.route("/products").get(getAllProducts);
+router.route("https://arfmart-1v2p.onrender.com/products").get(getAllProducts);
 
 router
-  .route("/admin/products")
+  .route("https://arfmart-1v2p.onrender.com/admin/products")
   .get(isAuthenticatedUser, authorizeRoles("admin"), getAdminProducts);
 
 router
-  .route("/admin/product/new")
+  .route("https://arfmart-1v2p.onrender.com/admin/product/new")
   .post(isAuthenticatedUser, authorizeRoles("admin"), createProduct);
 
 router
-  .route("/admin/product/:id")
+  .route("https://arfmart-1v2p.onrender.com/admin/product/:id")
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateProduct)
   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteProduct);
 
 
-router.route("/product/:id").get(getProductDetails);
+router.route("https://arfmart-1v2p.onrender.com/product/:id").get(getProductDetails);
 
-router.route("/review").put(isAuthenticatedUser, createProductReview);
+router.route("https://arfmart-1v2p.onrender.com/review").put(isAuthenticatedUser, createProductReview);
 
-router.route("/reviews").get(getProductReview).delete(isAuthenticatedUser, deleteReview);
+router.route("https://arfmart-1v2p.onrender.com/reviews").get(getProductReview).delete(isAuthenticatedUser, deleteReview);
 
 
 module.exports = router;
