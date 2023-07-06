@@ -70,13 +70,12 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-// handle every other route with index.html, which will contain
-// a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
-})
+app.get("/*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
+
 
 // Middleware for Errors
 app.use(errorMiddleware);
