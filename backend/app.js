@@ -72,10 +72,10 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
-app.use(express.static(path.join(__dirname, "/public/build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get('*', (req, res) => {
-  res.sendFile('main.html', { root: 'public' });
+  res.sendFile(path.join(__dirname, 'dist/frontend/index.html'));
 });
 
 
