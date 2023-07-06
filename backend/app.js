@@ -53,7 +53,8 @@ const errorMiddleware = require("./middleware/error");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
-app.use(history());
+app.use(historyApiFallback({ verbose: true }))
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
