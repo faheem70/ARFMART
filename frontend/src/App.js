@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from "./component/layout/Header/Header.js"
-import { browserHistory, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WebFont from "webfontloader";
 import React, { useState, useEffect } from 'react';
 import Footer from './component/layout/Footer/Footer.js';
@@ -74,7 +74,7 @@ function App() {
   }, []);
   return (
 
-    <Router history={browserHistory}>
+    <Router >
       <Header />
       {isAuthenticated && <UserOptions user={user} />}
       <Routes>
