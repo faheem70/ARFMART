@@ -52,7 +52,7 @@ function App() {
 
   async function getStripeApiKey() {
     try {
-      const { data } = await axios.get("/api/v1/stripeapikey");
+      const { data } = await axios.get(`https://arfmart.onrender.com/api/v1/stripeapikey`);
 
       setStripeApiKey(data.stripeApiKey);
     } catch (error) {
@@ -154,7 +154,7 @@ function App() {
         />
         <Route
          element ={
-            window.location.pathname === "/process/payment" ? null : NotFound
+            window.location.pathname === '/process/payment' ? null : NotFound
           }
         />
       </Routes>
