@@ -3,7 +3,7 @@ import { ADD_TO_CART ,REMOVE_CART_ITEM
 import axios from "axios";
 // Add to Cart
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`https://arfmart.onrender.com/api/v1/product/${id}`);
+  const { data } = await axios.get(`/api/v1/product/${id}`);
   
     dispatch({
       type: ADD_TO_CART,
