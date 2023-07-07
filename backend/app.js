@@ -54,7 +54,9 @@ const errorMiddleware = require("./middleware/error");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
-app.use(cors());
+app.use(cors({
+  methods: ["GET", "POST", "PUT", "DELETE"]
+}));
 app.use(history());
 app.use(express.json());
 app.use(cookieParser());
