@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
-//import { CgMouse } from "react-icons/all";
+import { BiMouse } from "react-icons/bi";
+
 import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/Metadata";
@@ -27,15 +28,15 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
-            <MetaData title="ECOMMERCE" />
+            <MetaData title="ARF MART" />
 
             <div className="banner">
-              <p>Welcome to Ecommerce</p>
+              <p>Welcome to ARF MART</p>
               <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
-            <a href="#container">
+              <a href="#container">
               <button>
-                  Scroll 
+                  Scroll <BiMouse />
               </button>
             </a>
             </div>
