@@ -54,7 +54,7 @@ const errorMiddleware = require("./middleware/error");
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
-
+app.options('*', cors());
 const corsOptions = {
   origin: ['http://localhost:3000'],
   credentials: true,            //access-control-allow-credentials:true
