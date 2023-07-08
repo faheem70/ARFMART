@@ -83,13 +83,7 @@ export const createProduct = (productData) => async (dispatch) => {
     dispatch({ type: NEW_PRODUCT_REQUEST });
 
     const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      },
+      headers: { "Content-Type": "application/json" },
     };
 
     const { data } = await axios.post(
@@ -116,13 +110,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     dispatch({ type: UPDATE_PRODUCT_REQUEST });
 
     const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      },
+      headers: { "Content-Type": "application/json" },
     };
 
     const { data } = await axios.put(
@@ -187,13 +175,7 @@ export const newReview = (reviewData) => async (dispatch) => {
     dispatch({ type: NEW_REVIEW_REQUEST });
 
     const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      },
+      headers: { "Content-Type": "application/json" },
     };
 
     const { data } = await axios.put(`/api/v1/review`, reviewData, config);

@@ -44,15 +44,7 @@ export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.post(
       `/api/v1/login`,
@@ -71,15 +63,7 @@ export const register = (userData) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_USER_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "multipart/form-data" } };
 
 
     const { data } = await axios.post(`/api/v1/register`, userData, config);
@@ -122,13 +106,7 @@ export const updateProfile = (userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PROFILE_REQUEST });
 
-    const config = {
-      headers: { "Content-Type": "multipart/form-data" },
-      "Access-Control-Allow-Headers": "Content-Type,*",
-      " Access-Control-Allow-Credentials": true,
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-    };
+    const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     const { data } = await axios.put(`/api/v1/me/update`, userData, config);
 
@@ -146,15 +124,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PASSWORD_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.put(
       `/api/v1/password/update`,
@@ -176,15 +146,7 @@ export const forgotPassword = (email) => async (dispatch) => {
   try {
     dispatch({ type: FORGOT_PASSWORD_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.post(`/api/v1/password/forgot`, email, config);
 
@@ -202,15 +164,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
   try {
     dispatch({ type: RESET_PASSWORD_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.put(
       `/api/v1/password/reset/${token}`,
@@ -261,15 +215,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_USER_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type,*",
-        " Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
-      }
-    };
+    const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.put(
       `/api/v1/admin/user/${id}`,
