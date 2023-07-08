@@ -38,8 +38,7 @@ import {
 } from "../constants/userConstants";
 import axios from "axios";
 
-
-//Login
+// Login
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
@@ -64,7 +63,6 @@ export const register = (userData) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_REQUEST });
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
-
 
     const { data } = await axios.post(`/api/v1/register`, userData, config);
 
@@ -180,11 +178,6 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     });
   }
 };
-export const clearErrors = () => async (dispatch) => {
-  dispatch({ type: CLEAR_ERRORS });
-};
-
-
 
 // get All Users
 export const getAllUsers = () => async (dispatch) => {
@@ -246,4 +239,9 @@ export const deleteUser = (id) => async (dispatch) => {
       payload: error.response.data.message,
     });
   }
+};
+
+// Clearing Errors
+export const clearErrors = () => async (dispatch) => {
+  dispatch({ type: CLEAR_ERRORS });
 };
