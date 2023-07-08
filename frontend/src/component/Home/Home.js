@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { BiMouse } from "react-icons/bi";
-
+import { HashLink } from 'react-router-hash-link';
 import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/Metadata";
@@ -34,11 +34,11 @@ const Home = () => {
               <p>Welcome to ARF MART</p>
               <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
-              <a href="#container">
+              <HashLink to="/#container">
               <button>
                   Scroll <BiMouse />
               </button>
-            </a>
+              </HashLink>
             </div>
 
             <h2 className="homeHeading">Featured Products</h2>
