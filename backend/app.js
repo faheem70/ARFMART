@@ -47,7 +47,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const path = require("path");
-const history = require('connect-history-api-fallback');
+//const history = require('connect-history-api-fallback');
 const errorMiddleware = require("./middleware/error");
 
 // Config
@@ -58,7 +58,7 @@ app.use(cors({
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
-app.use(history());
+//app.use(history());
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
