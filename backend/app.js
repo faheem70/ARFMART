@@ -56,7 +56,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 }
 app.options('*', cors());
 const corsOptions = {
-  ["http://localhost:4000", "http://localhost:3000"],
+  origin: ["http://localhost:4000", "http://localhost:3000"],
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 }
