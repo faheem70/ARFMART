@@ -29,6 +29,11 @@ export const createOrder = (order) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type,*",
+        " Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
+
       },
     };
     const { data } = await axios.post(`/api/v1/order/new`, order, config);
@@ -84,6 +89,10 @@ export const updateOrder = (id, order) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "Content-Type,*",
+        " Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
       },
     };
     const { data } = await axios.put(
